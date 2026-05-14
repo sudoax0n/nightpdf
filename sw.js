@@ -4,7 +4,7 @@ const ASSETS = [
   '/index.html',
   '/styles.css',
   '/script.js',
-  '/favicon.svg'
+  '/public/favicon.svg'
 ];
 
 self.addEventListener('install', (event) => {

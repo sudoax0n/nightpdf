@@ -1,7 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("NightPDF: DOM fully loaded and parsed.");
+
     // --- PWA SERVICE WORKER REGISTRATION ---
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
+        navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log("NightPDF: Service Worker registered.", reg))
+            .catch(err => console.warn("NightPDF: Service Worker registration failed.", err));
+    }
+
+    // Check for PDFLib dependency
+    if (typeof PDFLib === 'undefined') {
+        console.error("NightPDF Error: PDFLib is not loaded! Please check your internet connection or the script tag.");
+        alert("Critical Error: PDF processing library failed to load. Please refresh the page.");
+        return;
     }
 
     // --- PWA INSTALL PROMPT ---
