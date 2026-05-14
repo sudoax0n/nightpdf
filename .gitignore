@@ -1,12 +1,16 @@
 # OS Files
 .DS_Store
 Thumbs.db
+*.icloud
 
 # Editor/IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+.project
+.settings/
+.classpath
 
 # Project specific
 conductor/
@@ -14,3 +18,22 @@ context.txt
 
 # Local Vercel folder
 .vercel/
+
+# Claude / Agentic folders
+.claude/
+
+# Node / Dependencies
+node_modules/
+dist/
+build/
+.cache/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment / Secrets
+.env
+.env.*
+!.env.example

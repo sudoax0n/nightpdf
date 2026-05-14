@@ -1,4 +1,4 @@
-const CACHE_NAME = 'invert-pdf-v1';
+const CACHE_NAME = 'night-pdf-v1';
 const ASSETS = [
   '/',
   '/index.html',

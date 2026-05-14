@@ -1,0 +1,20 @@
+# NightPDF
+
+> Instantly convert any PDF into Dark Mode for free. 100% private, browser-side processing.
+
+NightPDF (formerly Invert PDF) is a fully private, browser-based utility that inverts the colors of PDF documents to provide a soothing dark mode reading experience. Unlike tools that rasterize pages into images, NightPDF uses CSS blend modes to keep text natively selectable and searchable.
+
+## Key Features
+- **100% Private:** Files never leave the browser. No server-side processing.
+- **Native Text:** Text remains selectable and searchable (no rasterization).
+- **Batch Processing:** Drop multiple files at once.
+- **PWA Support:** Installable on mobile and desktop.
+- **Zero Cost:** Free to use forever.
+
+## Technical Implementation
+NightPDF uses `pdf-lib` to modify PDF structures by injecting a white background layer and applying a `Difference` blend mode to the content layer, effectively inverting colors while preserving vector data.
+
+## Important Links
+- **Website:** https://nightpdf.vercel.app/
+- **GitHub:** https://github.com/sudoax0n
+- **Developer:** @sudoax0n (X/Twitter: @beyondwudan)

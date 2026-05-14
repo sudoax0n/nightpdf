@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Converting study stress into dark mode chill. 😎",
         "No innocent PDFs were harmed in this process. ✌️",
         "Wait for it... magic is happening! ✨",
-        "Brewing virtual espresso for your eyes. ☕"
+        "Brewing virtual espresso for your eyes. ☕",
+        "The sun is basically a giant flashbang. Stay safe. 🦇"
     ];
 
     // --- PDF PROCESSING LOGIC ---
@@ -161,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const url = URL.createObjectURL(blob);
             
             downloadBtn.href = url;
-            downloadBtn.download = file.name.replace('.pdf', '_dark.pdf');
+            downloadBtn.download = file.name.replace('.pdf', '_night.pdf');
             downloadBtn.classList.remove('hidden');
             quoteText.innerText = "Processing Complete! 🎉";
             quoteText.classList.add('text-lime-500', 'dark:text-lime-400');
