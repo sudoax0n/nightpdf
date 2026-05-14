@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Neo-brutalist shadow -->
+  <rect x="12" y="12" width="44" height="48" rx="8" fill="#000" />
+  
+  <!-- Main Document -->
+  <rect x="8" y="8" width="44" height="48" rx="8" fill="#d9f99d" stroke="#000" stroke-width="4"/>
+  
+  <!-- Document Lines -->
+  <path d="M18 24h24" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+  <path d="M18 34h16" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Little dark mode moon/circle -->
+  <circle cx="36" cy="44" r="6" fill="#f9a8d4" stroke="#000" stroke-width="3"/>
+</svg>

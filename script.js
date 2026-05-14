@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // Set initial random quote in header
+    const dynamicQuote = document.getElementById('dynamic-quote');
+    if (dynamicQuote) {
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        dynamicQuote.innerText = `"${randomQuote}"`;
+    }
+
     // --- PWA INSTALL PROMPT ---
     let deferredPrompt;
     const installBtn = document.getElementById('install-btn');
