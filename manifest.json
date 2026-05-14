@@ -1,6 +1,6 @@
 {
-  "name": "Invert PDF",
-  "short_name": "InvertPDF",
+  "name": "NightPDF",
+  "short_name": "NightPDF",
   "description": "Instantly convert any PDF into Dark Mode for free. 100% private.",
   "start_url": "/",
   "display": "standalone",

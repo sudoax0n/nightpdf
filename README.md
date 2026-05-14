@@ -1,10 +1,10 @@
-# 🦇 Invert PDF
+# 🦇 NightPDF
 
-[![Site Status](https://img.shields.io/website?url=https%3A%2F%2Finvertpdf.vercel.app)](https://invertpdf.vercel.app)
+[![Site Status](https://img.shields.io/website?url=https%3A%2F%2Fnightpdf.vercel.app)](https://nightpdf.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <div align="center">
-  <img src="public/app-preview.png" width="800" alt="Invert PDF Preview">
+  <img src="public/app-preview.png" width="800" alt="NightPDF Preview">
   <br>
   <img src="public/bat.svg" width="50"> <b>"Because your retinas deserve a life too."</b> <img src="public/bat.svg" width="50">
 </div>
@@ -13,7 +13,7 @@
 
 ## 🛠️ What is this shit?
 
-**Invert PDF** is the tool I built because I was tired of blinding myself at 4 AM while studying. Unlike those "lazy" online converters that just turn your pages into low-res images, this thing uses **pure math (blend modes)** to invert colors while keeping the text sharp, selectable, and searchable.
+**NightPDF** is the tool I built because I was tired of blinding myself at 4 AM while studying. Unlike those "lazy" online converters that just turn your pages into low-res images, this thing uses **pure math (blend modes)** to invert colors while keeping the text sharp, selectable, and searchable.
 
 <img src="public/coffee.svg" width="100" align="right">
 
