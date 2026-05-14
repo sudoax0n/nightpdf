@@ -1,8 +1,9 @@
 {
   "version": 2,
-  "public": true,
-  "name": "nightpdf",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/$1" }
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
