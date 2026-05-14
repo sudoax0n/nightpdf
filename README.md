@@ -3,39 +3,49 @@
 [![Site Status](https://img.shields.io/website?url=https%3A%2F%2Finvertpdf.vercel.app)](https://invertpdf.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **"Because 4 AM study sessions shouldn't burn your retinas."** 🦉🌙
-
-![Invert PDF Banner](public/banner.svg)
-
-**Invert PDF** is a lighting-fast, 100% private browser-side tool designed for students, researchers, and night owls. Unlike other tools that lazily rasterize pages into flat images, Invert PDF uses transparency blend modes to visually flip colors while keeping the underlying text layer **natively selectable and searchable**.
-
-## 🚀 Key Features
-
-*   🔒 **100% Private:** Magic happens on your device. Files never touch a server.
-*   📚 **Batch Mode:** Toss in a whole semester of reading and process them at once.
-*   🖱️ **Natively Selectable:** Copy, highlight, and search your PDF just like the original.
-*   🎨 **Neo-Brutalist UI:** A quirky, vibey interface that makes studying feel a little less like a chore.
-*   📱 **PWA Support:** Install it as a native app on your desktop or mobile.
-*   🌙 **Website Dark Mode:** Because the tool itself shouldn't be blinding either.
-
-## 🛠️ How it Works
-
-We use **Transparency Blend Modes** (`Difference` or `Exclusion`).
-1.  **Inject Background:** Since many PDFs have transparent backgrounds, we inject a solid white layer first.
-2.  **Apply Inversion:** A pure white rectangle is drawn over the entire page using the `Difference` blend mode.
-3.  **The Result:** White backgrounds become black, black text becomes white, and **text selection remains 100% functional**.
-
-## 📦 Tech Stack
-
-*   **Pure Vanilla JS/HTML/CSS** (Zero "React shit", zero bloat)
-*   **[pdf-lib](https://pdf-lib.js.org/)** (The engine behind the magic)
-*   **Tailwind CSS** (via CDN for instant styling)
-*   **Vercel** (Zero-cost, lightning-fast hosting)
-
-## 🧙‍♂️ Author
-
-Built with ☕ and slight sleep deprivation by **[@sudoax0n](https://github.com/sudoax0n)**.
-Follow me on X: **[@beyondwudan](https://x.com/beyondwudan)**
+<div align="center">
+  <img src="public/app-preview.png" width="800" alt="Invert PDF Preview">
+  <br>
+  <img src="public/bat.svg" width="50"> <b>"Because your retinas deserve a life too."</b> <img src="public/bat.svg" width="50">
+</div>
 
 ---
-*No innocent PDFs were harmed in the making of this tool. ✌️*
+
+## 🛠️ What is this shit?
+
+**Invert PDF** is the tool I built because I was tired of blinding myself at 4 AM while studying. Unlike those "lazy" online converters that just turn your pages into low-res images, this thing uses **pure math (blend modes)** to invert colors while keeping the text sharp, selectable, and searchable.
+
+<img src="public/coffee.svg" width="100" align="right">
+
+### 🚀 Stupid Fast Features
+- 🔒 **100% Private:** No uploads. No tracking. No "cloud" bullshit.
+- 📚 **Batch Mode:** Drop a whole textbook or 50 PDFs. We don't care.
+- 🖱️ **Selectable Text:** Highlight and copy text like a normal human being.
+- 📱 **PWA:** Install it on your phone so you can study in the dark anywhere.
+- 🌙 **Website Dark Mode:** Because the tool itself shouldn't be a flashbang.
+
+---
+
+## ☢️ The "Nuked" Button
+<img src="public/nuked.svg" width="120" align="left">
+
+Yeah, I added a "Download All" button and then **immediately nuked it.** 
+Why? Because extracting ZIP files is a chore and I didn't feel like coding the extractor logic. Download your files one by one—it builds character.
+
+---
+
+## 📦 How it works (The nerdy part)
+1. **White Layer:** We inject a solid white rectangle behind your content.
+2. **Difference Mode:** We draw another white rectangle on top with `BlendMode.Difference`.
+3. **Magic:** Colors flip. Black becomes white. White becomes black. Your eyes stop bleeding.
+
+---
+
+## 🧙‍♂️ The Sleep Deprived Dev
+Built by **[@sudoax0n](https://github.com/sudoax0n)**.
+Check my daily rants on X: **[@beyondwudan](https://x.com/beyondwudan)**
+
+<div align="center">
+  <br>
+  <i>No innocent PDFs were harmed. ✌️</i>
+</div>
