@@ -1,14 +1,14 @@
 {
   "name": "NightPDF",
   "short_name": "NightPDF",
-  "description": "Instantly convert any PDF into Dark Mode for free. 100% private.",
+  "description": "Make bright PDFs less blinding without uploading them anywhere.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f0fdf4",
-  "theme_color": "#f0fdf4",
+  "background_color": "#151229",
+  "theme_color": "#dfff69",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "public/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
