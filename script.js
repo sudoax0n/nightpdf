@@ -15,6 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // --- QUOTES DATABASE ---
+    const quotes = [
+        "Brewing dark mode potion...",
+        "Your retinas are writing us a thank you note. 👁️",
+        "4 AM is just a social construct anyway. 🌙",
+        "Inverting reality... one page at a time.",
+        "Delaying eye strain, one PDF at a time. 🚀",
+        "Converting study stress into dark mode chill. 😎",
+        "No innocent PDFs were harmed in this process. ✌️",
+        "Wait for it... magic is happening! ✨",
+        "Brewing virtual espresso for your eyes. ☕",
+        "The sun is basically a giant flashbang. Stay safe. 🦇"
+    ];
+
     // Set initial random quote in header
     const dynamicQuote = document.getElementById('dynamic-quote');
     if (dynamicQuote) {
@@ -61,20 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'dark');
         }
     });
-
-    // --- QUOTES DATABASE ---
-    const quotes = [
-        "Brewing dark mode potion...",
-        "Your retinas are writing us a thank you note. 👁️",
-        "4 AM is just a social construct anyway. 🌙",
-        "Inverting reality... one page at a time.",
-        "Delaying eye strain, one PDF at a time. 🚀",
-        "Converting study stress into dark mode chill. 😎",
-        "No innocent PDFs were harmed in this process. ✌️",
-        "Wait for it... magic is happening! ✨",
-        "Brewing virtual espresso for your eyes. ☕",
-        "The sun is basically a giant flashbang. Stay safe. 🦇"
-    ];
 
     // --- PDF PROCESSING LOGIC ---
     const dropZone = document.getElementById('drop-zone');
