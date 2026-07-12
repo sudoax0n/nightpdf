@@ -1,286 +1,214 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Aggressive SEO & Meta Core -->
-    <title>NightPDF | Free Dark Mode PDF Converter & Reader</title>
-    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
-    <meta name="description" content="Instantly convert any PDF into Dark Mode for free. 100% private, browser-side processing. Keeps all text selectable and searchable. Perfect for late-night studying and eye strain relief.">
-    <meta name="keywords" content="PDF dark mode, invert PDF colors, read PDFs at night, free PDF dark mode converter, night mode PDF reader, eye protection PDF, PDF color inverter online">
-    <meta name="author" content="@sudoax0n">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://nightpdf.vercel.app/"> <!-- Update this when you buy a domain! -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NightPDF | Make PDFs Less Blinding</title>
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Turn bright PDFs into dark mode locally in your browser. No uploads, no accounts, and your text stays selectable.">
+  <meta name="keywords" content="PDF dark mode, invert PDF colors, night mode PDF, private PDF converter, browser PDF tool">
+  <meta name="author" content="@sudoax0n">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://nightpdf.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nightpdf.vercel.app/">
+  <meta property="og:title" content="NightPDF | Make PDFs Less Blinding">
+  <meta property="og:description" content="Dark-mode your PDFs locally. Zero uploads, zero accounts, fully searchable text.">
+  <meta property="og:image" content="https://nightpdf.vercel.app/public/app-preview.png">
+  <meta property="og:site_name" content="NightPDF">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@beyondwudan">
+  <meta name="twitter:title" content="NightPDF | Make PDFs Less Blinding">
+  <meta name="twitter:description" content="Dark-mode your PDFs locally. Zero uploads, zero accounts, fully searchable text.">
+  <meta name="twitter:image" content="https://nightpdf.vercel.app/public/app-preview.png">
 
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nightpdf.vercel.app/">
-    <meta property="og:title" content="NightPDF | Make Your PDFs Dark Mode">
-    <meta property="og:description" content="Turn blinding white PDFs into soothing dark mode instantly. Zero server uploads, 100% private.">
-    <meta property="og:image" content="https://nightpdf.vercel.app/public/app-preview.png">
-    <meta property="og:site_name" content="NightPDF">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NightPDF",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "url": "https://nightpdf.vercel.app/",
+    "description": "A private browser-based PDF dark mode converter that preserves selectable and searchable text.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
 
-    <!-- Twitter / X Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@beyondwudan">
-    <meta name="twitter:creator" content="@beyondwudan">
-    <meta name="twitter:title" content="NightPDF | Free Dark Mode Converter">
-    <meta name="twitter:description" content="Turn blinding white PDFs into soothing dark mode instantly. Files never leave your device. Magic happens right in your browser. 🪄">
-    <meta name="twitter:image" content="https://nightpdf.vercel.app/public/app-preview.png">
-
-    <!-- JSON-LD Schema for Google Rich Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "NightPDF",
-      "alternateName": "PDF Dark Mode Converter",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Any",
-      "url": "https://nightpdf.vercel.app/",
-      "description": "A fully private, browser-based tool to convert PDFs into dark mode by inverting colors while keeping text natively selectable and searchable.",
-      "creator": {
-        "@type": "Person",
-        "name": "sudoax0n",
-        "url": "https://github.com/sudoax0n"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
-      "featureList": [
-        "100% Client-Side Processing",
-        "Keeps Text Selectable",
-        "No Rasterization",
-        "Free forever"
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Why use a PDF Dark Mode Converter?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Reading long PDFs on a bright screen causes eye strain, especially at night. NightPDF inverts colors while keeping text natively selectable and searchable, unlike other tools that rasterize pages."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is NightPDF private and secure?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, NightPDF is 100% private. All processing happens locally in your browser using JavaScript. Your files are never uploaded to a server."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "How to convert PDF to Dark Mode",
-      "description": "Convert any PDF into a dark mode version instantly while keeping text selectable.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "text": "Select or drag and drop your PDF files into the upload area."
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Wait for the browser-side magic to invert the colors."
-        },
-        {
-          "@type": "HowToStep",
-          "text": "Click the download button to save your dark mode PDF."
-        }
-      ]
-    }
-    </script>
-
-    <!-- Theme Color for Mobile Browsers -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#f0fdf4">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-      }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    
-    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-    <script defer src="script.js"></script>
-    <link rel="alternate" type="text/plain" href="/llms.txt">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#dfff69">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script defer src="script.js"></script>
+  <link rel="alternate" type="text/plain" href="/llms.txt">
 </head>
-<body class="min-h-screen flex flex-col relative overflow-x-hidden selection:bg-pink-300 selection:text-black dark:bg-[#0a0a0a] dark:selection:bg-lime-400">
+<body>
+  <a class="skip-link" href="#converter">Skip to converter</a>
 
-    <!-- Massive Quirky Background Decorations -->
-    <div aria-hidden="true" class="fixed top-20 -left-10 w-48 h-48 bg-blue-300 border-4 border-black rounded-full neo-shadow mix-blend-multiply dark:mix-blend-screen opacity-80 float-anim -z-10 hidden md:block"></div>
-    <div aria-hidden="true" class="fixed top-40 right-10 w-32 h-32 bg-orange-300 border-4 border-black neo-shadow mix-blend-multiply dark:mix-blend-screen opacity-80 float-anim-delayed -z-10 hidden lg:block rotate-12"></div>
-    <div aria-hidden="true" class="fixed bottom-20 left-20 w-64 h-24 bg-pink-300 border-4 border-black neo-shadow mix-blend-multiply dark:mix-blend-screen opacity-80 float-anim -z-10 hidden xl:block -rotate-6"></div>
-    <div aria-hidden="true" class="fixed bottom-10 -right-20 w-80 h-80 bg-purple-300 border-4 border-black rounded-full neo-shadow mix-blend-multiply dark:mix-blend-screen opacity-60 float-anim-delayed -z-10 hidden md:block"></div>
+  <div class="background-doodles" aria-hidden="true">
+    <span class="blob blob-one"></span>
+    <span class="blob blob-two"></span>
+    <span class="blob blob-three"></span>
+    <span class="scribble scribble-one">✦</span>
+    <span class="scribble scribble-two">☾</span>
+    <span class="scribble scribble-three">PDF</span>
+  </div>
 
-    <!-- Emoji scatter -->
-    <div aria-hidden="true" class="fixed top-1/4 right-1/4 text-6xl rotate-45 -z-10 hidden xl:block opacity-60 float-anim">🦇</div>
-    <div aria-hidden="true" class="fixed bottom-1/3 left-10 text-7xl -rotate-12 -z-10 hidden xl:block opacity-60 float-anim-delayed">☕</div>
-    <div aria-hidden="true" class="fixed top-32 left-1/3 text-5xl rotate-12 -z-10 hidden lg:block opacity-60 float-anim">👾</div>
+  <header class="site-header shell">
+    <a class="brand" href="#top" aria-label="NightPDF home">
+      <span class="brand-bat" aria-hidden="true">🦇</span>
+      <span class="brand-word">NightPDF</span>
+      <span class="brand-sticker">eye-friendly-ish</span>
+    </a>
 
-    <!-- Header -->
-    <header class="w-full max-w-6xl mx-auto p-4 md:p-6 flex justify-between items-center relative z-20">
-        <div class="flex items-center gap-2 transform hover:rotate-3 transition-transform cursor-pointer">
-            <div aria-hidden="true" class="bg-black text-lime-400 font-bold px-3 py-1 text-xl border-2 border-black neo-shadow-sm transform -rotate-3 dark:bg-white dark:text-black dark:border-white">🦇</div>
-            <div class="text-2xl font-bold bg-white border-2 border-black px-4 py-1 neo-shadow-sm tracking-tight dark:bg-black dark:text-white dark:border-white">NightPDF</div>
+    <nav class="top-actions" aria-label="Primary navigation">
+      <a class="mini-link desktop-only" href="#how-it-works">How?</a>
+      <a class="mini-link desktop-only" href="https://github.com/sudoax0n/nightpdf" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <button id="install-btn" class="mini-button hidden" type="button">Install ↓</button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">
+        <span class="theme-light-icon" aria-hidden="true">🌙</span>
+        <span class="theme-dark-icon" aria-hidden="true">☀️</span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>NO UPLOADS</span><i>✦</i><span>NO ACCOUNTS</span><i>✦</i><span>TEXT STAYS SELECTABLE</span><i>✦</i><span>YOUR RETINAS SAY THANKS</span><i>✦</i>
+      <span>NO UPLOADS</span><i>✦</i><span>NO ACCOUNTS</span><i>✦</i><span>TEXT STAYS SELECTABLE</span><i>✦</i><span>YOUR RETINAS SAY THANKS</span><i>✦</i>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>100% local</span> / 0% suspicious cloud nonsense</div>
+        <h1>Stop letting PDFs <em>flashbang</em> you.</h1>
+        <p class="hero-lede">Drop in a painfully white PDF. Get back a dark one with searchable, selectable text still alive and kicking.</p>
+        <div class="hero-chips" aria-label="NightPDF benefits">
+          <span>🧠 no sign-up</span>
+          <span>🔒 never uploaded</span>
+          <span>⚡ browser-powered</span>
         </div>
-        
-        <div class="flex gap-4 items-center">
-            <!-- Install Button (PWA) -->
-            <button id="install-btn" class="hidden bg-lime-400 border-2 border-black px-4 py-2 rounded-full neo-btn font-bold text-sm">Install App ⬇️</button>
+      </div>
 
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" class="bg-white border-2 border-black p-2 rounded-full neo-btn hover:bg-yellow-100 dark:bg-black dark:border-white dark:hover:bg-slate-800 transition-colors group" title="Toggle Theme">
-                <span class="block dark:hidden">🌙</span>
-                <span class="hidden dark:block">☀️</span>
-            </button>
+      <aside class="hero-note" aria-label="NightPDF note">
+        <span class="tape" aria-hidden="true"></span>
+        <strong>Made for:</strong>
+        <p>4 AM papers, cursed lecture notes, giant textbooks, and people who refuse to lower their screen brightness.</p>
+        <span class="note-doodle" aria-hidden="true">↙</span>
+      </aside>
+    </section>
 
-            <!-- GitHub Link -->
-            <a href="https://github.com/sudoax0n" target="_blank" rel="noopener noreferrer" class="bg-white border-2 border-black p-2 md:px-4 md:py-2 flex items-center gap-2 rounded-full neo-btn hover:bg-gray-100 dark:bg-black dark:border-white group">
-                <svg class="w-6 h-6 dark:text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                <span class="font-bold hidden md:inline group-hover:text-pink-600 dark:group-hover:text-pink-400 dark:text-white transition-colors">@sudoax0n</span>
-            </a>
-            <!-- X/Twitter Link -->
-            <a href="https://x.com/beyondwudan" target="_blank" rel="noopener noreferrer" class="bg-white border-2 border-black p-2 md:px-4 md:py-2 flex items-center gap-2 rounded-full neo-btn hover:bg-blue-50 dark:bg-black dark:border-white group">
-                <svg class="w-6 h-6 dark:text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                <span class="font-bold hidden md:inline group-hover:text-blue-500 dark:group-hover:text-blue-400 dark:text-white transition-colors">@beyondwudan</span>
-            </a>
+    <section id="converter" class="converter-shell shell" aria-labelledby="converter-title">
+      <div class="converter-card">
+        <span class="corner-label">LOCAL LAB</span>
+        <div class="converter-heading">
+          <div>
+            <p class="tiny-kicker">Night shift starts here</p>
+            <h2 id="converter-title">Feed me your PDFs.</h2>
+          </div>
+          <span class="privacy-stamp">STAYS<br>ON DEVICE</span>
         </div>
-    </header>
 
-    <!-- Main Content App Box -->
-    <main class="flex-grow flex flex-col items-center justify-center p-4 relative z-10 w-full mt-8 mb-12">
-        <div class="w-full max-w-2xl bg-white dark:bg-[#1a1a1a] dark:text-white neo-box p-8 md:p-12 relative overflow-hidden dark:border-white">
-            <!-- Inner Quirky decorative elements -->
-            <div aria-hidden="true" class="absolute -top-4 -right-4 w-24 h-24 bg-pink-300 rounded-full border-4 border-black neo-shadow hidden md:block dark:border-white"></div>
-            <div aria-hidden="true" class="absolute top-12 -left-6 w-12 h-12 bg-yellow-300 border-4 border-black neo-shadow hidden md:block rotate-12 dark:border-white"></div>
+        <input id="file-upload" class="visually-hidden" type="file" accept="application/pdf,.pdf" multiple>
+        <div id="drop-zone" class="drop-zone" role="button" tabindex="0" aria-controls="file-upload" aria-describedby="drop-help">
+          <div class="drop-zone-pattern" aria-hidden="true"></div>
+          <div class="upload-glyph" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M19 50h27a12 12 0 0 0 2.2-23.8A17 17 0 0 0 16.3 22 11 11 0 0 0 19 50Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 44V24m0 0-8 8m8-8 8 8" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="drop-title">Toss PDF(s) here</p>
+          <p id="drop-help" class="drop-help">or click the giant obvious button</p>
+          <span class="select-button">SELECT PDF(S) <b>↗</b></span>
+          <p class="drop-smallprint">Multiple files? Sure. Huge textbook? Your RAM decides.</p>
+        </div>
 
-            <header class="mb-10 text-center relative z-10">
-                <div class="inline-block bg-lime-300 dark:bg-lime-400 border-2 border-black dark:border-white rounded-full px-4 py-1 mb-4 font-bold text-sm neo-shadow-sm transform -rotate-2 text-black">
-                    ✨ 100% Free & Private ✨
-                </div>
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight dark:text-white">Night<span class="text-lime-500 dark:text-lime-400 underline decoration-8 decoration-pink-300 dark:decoration-pink-500">PDF</span></h1>
-                <h2 id="dynamic-quote" class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-200 mb-2">"Because your retinas deserve a life too." 🦇</h2>
-                <p class="text-base font-semibold text-gray-600 dark:text-gray-400">Save your eyes from 4 AM flashbangs. Turn blinding white PDFs into soothing dark mode instantly.</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 font-medium">Files never leave your device. Magic happens right here in your browser. 🪄</p>
-            </header>
+        <div id="upload-notice" class="upload-notice hidden" role="status" aria-live="polite"></div>
 
-            <div class="relative z-10">
-                <!-- Upload Area -->
-                <div id="drop-zone" class="bg-purple-100 dark:bg-purple-950/40 border-4 border-black dark:border-white border-dashed hover:bg-purple-200 dark:hover:bg-purple-900/60 transition-colors p-10 md:p-16 text-center cursor-pointer rounded-2xl group">
-                    <input type="file" id="file-upload" accept="application/pdf" multiple class="hidden">
-                    <div class="pointer-events-none transform group-hover:scale-105 transition-transform duration-300">
-                        <div class="w-20 h-20 bg-white dark:bg-black border-4 border-black dark:border-white rounded-full neo-shadow mx-auto mb-6 flex items-center justify-center">
-                            <!-- Files Stack Icon -->
-                            <svg class="w-10 h-10 text-black dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M7 18H17V20H7V18Z" fill="currentColor"/><path d="M17 14H7V16H17V14Z" fill="currentColor"/><path d="M7 10H17V12H17V10Z" fill="currentColor"/><path d="M15 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V7L15 2ZM6 20V4H14V8H18V20H6Z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <p class="text-2xl font-bold mb-2 text-black dark:text-white">Toss your PDF(s) here!</p>
-                        <p class="text-gray-600 dark:text-gray-400 font-semibold italic">Batch mode: Drop a single page or a 500-page textbook. We won't blink. 🚀</p>
-                        <p class="text-xs text-gray-400 mt-2">(or click to browse)</p>
-                    </div>
-                </div>
-
-                <!-- Batch Processing List -->
-                <div id="file-list" class="mt-8 space-y-4 hidden">
-                    <!-- Dynamic file items go here -->
-                </div>
-
-                <!-- Nuked Button Area -->
-                <div id="nuked-area" class="mt-8 text-center hidden">
-                    <button class="bg-gray-300 dark:bg-gray-800 text-gray-500 dark:text-gray-600 border-4 border-gray-400 dark:border-gray-700 px-8 py-3 rounded-xl cursor-not-allowed font-bold">DOWNLOAD_ALL_PACK.ZIP (NUKED ☢️)</button>
-                    <p class="text-xs text-gray-500 mt-2 italic">"Dev doesn't like extracting zips so he nuked the button. Download them one by one, lazy bones!"</p>
-                </div>
+        <div id="queue" class="queue hidden" aria-live="polite">
+          <div class="queue-top">
+            <div>
+              <p class="tiny-kicker">The night shift</p>
+              <h3><span id="queue-count">0</span> PDF<span id="queue-plural">s</span> in the machine</h3>
             </div>
+            <button id="clear-completed" class="clear-button hidden" type="button">clear finished ✕</button>
+          </div>
+          <div id="file-list" class="file-list"></div>
         </div>
+      </div>
 
-        <!-- Semantic SEO Content (Crucial for ranking) -->
-        <article class="w-full max-w-2xl mt-12 mb-4 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-4 border-black dark:border-white neo-shadow-sm p-8 rounded-2xl relative z-10 text-left">
-            <h2 class="text-3xl font-bold mb-4 dark:text-white">Why use a PDF Dark Mode Converter?</h2>
-            <p class="text-gray-700 dark:text-gray-300 font-medium mb-6 leading-relaxed">
-                Reading long PDFs on a bright screen is a massive strain on your eyes, especially during late-night study sessions or coding sprints. Most "night mode PDF readers" online lazily convert your pages into flat images. That ruins the entire point of a PDF—you lose the ability to select text, search for keywords, or click links. 
-            </p>
-            
-            <h3 class="text-2xl font-bold mb-3 text-pink-600 dark:text-pink-400">How NightPDF is different:</h3>
+      <div class="converter-side-stickers" aria-hidden="true">
+        <span class="sticker sticker-one">NO<br>SERVER</span>
+        <span class="sticker sticker-two">PDF<br>GO BRRR</span>
+        <span class="sticker sticker-three">☕ + 🌙</span>
+      </div>
+    </section>
 
-            <div class="overflow-x-auto mb-6">
-                <table class="w-full text-left border-collapse border-2 border-black dark:border-white">
-                    <thead>
-                        <tr class="bg-lime-100 dark:bg-lime-900/30">
-                            <th class="p-2 border-2 border-black dark:border-white font-bold">Feature</th>
-                            <th class="p-2 border-2 border-black dark:border-white font-bold">Other Tools</th>
-                            <th class="p-2 border-2 border-black dark:border-white font-bold text-pink-600 dark:text-pink-400">NightPDF</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm">
-                        <tr>
-                            <td class="p-2 border-2 border-black dark:border-white font-semibold">Privacy</td>
-                            <td class="p-2 border-2 border-black dark:border-white">Server Uploads</td>
-                            <td class="p-2 border-2 border-black dark:border-white font-bold text-green-600 dark:text-green-400">100% Local</td>
-                        </tr>
-                        <tr>
-                            <td class="p-2 border-2 border-black dark:border-white font-semibold">Text Quality</td>
-                            <td class="p-2 border-2 border-black dark:border-white">Rasterized</td>
-                            <td class="p-2 border-2 border-black dark:border-white font-bold text-green-600 dark:text-green-400">Native Vector</td>
-                        </tr>
-                        <tr>
-                            <td class="p-2 border-2 border-black dark:border-white font-semibold">Searchable</td>
-                            <td class="p-2 border-2 border-black dark:border-white">No / OCR</td>
-                            <td class="p-2 border-2 border-black dark:border-white font-bold text-green-600 dark:text-green-400">Fully Selectable</td>
-                        </tr>
-                        <tr>
-                            <td class="p-2 border-2 border-black dark:border-white font-semibold">Speed</td>
-                            <td class="p-2 border-2 border-black dark:border-white">Slow Uploads</td>
-                            <td class="p-2 border-2 border-black dark:border-white font-bold text-green-600 dark:text-green-400">Millisecond Magic</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <section id="how-it-works" class="steps-section shell">
+      <div class="section-title-row">
+        <div>
+          <p class="tiny-kicker">Three extremely difficult steps</p>
+          <h2>So simple it is almost insulting.</h2>
+        </div>
+        <span class="hand-arrow" aria-hidden="true">↘</span>
+      </div>
 
-            <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 font-medium space-y-2 mb-6 ml-4">
-                <li><strong class="text-black dark:text-white">100% Client-Side:</strong> Your files never leave your computer. There are no server uploads, meaning your private documents stay completely private.</li>
-                <li><strong class="text-black dark:text-white">Native Text Selection:</strong> By using advanced blend modes rather than rasterization, black text is inverted to white while remaining fully selectable and searchable.</li>
-                <li><strong class="text-black dark:text-white">Zero Lag:</strong> Because the magic happens directly in your browser's memory, conversion takes milliseconds, regardless of your internet connection speed.</li>
-            </ul>
-
-            <h3 class="text-xl font-bold mb-3 dark:text-white">Technical Deep Dive (for the nerds):</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 font-medium leading-relaxed mb-4">
-                NightPDF uses surgical-grade math to flip colors without touching your text quality. We leverage <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pdf-lib</code> to manipulate the PDF's low-level graphics state, injecting a <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Difference</code> blend mode operator that mathematically inverts the RGB values of underlying vector elements. This keeps your documents lightweight, sharp, and fully searchable.
-            </p>
+      <div class="steps-grid">
+        <article class="step-card step-pink">
+          <span class="step-number">01</span>
+          <h3>Drop it</h3>
+          <p>Choose one PDF or dump in a whole stack. Nothing gets sent anywhere.</p>
+          <span class="step-emoji" aria-hidden="true">📄</span>
         </article>
-    </main>
+        <article class="step-card step-yellow">
+          <span class="step-number">02</span>
+          <h3>Browser magic</h3>
+          <p>NightPDF flips the page colours locally while keeping native text intact.</p>
+          <span class="step-emoji" aria-hidden="true">🪄</span>
+        </article>
+        <article class="step-card step-blue">
+          <span class="step-number">03</span>
+          <h3>Yoink it back</h3>
+          <p>Download the dark copy and continue pretending sleep is optional.</p>
+          <span class="step-emoji" aria-hidden="true">🦇</span>
+        </article>
+      </div>
+    </section>
 
-    <!-- Quirky Footer -->
-    <footer class="w-full p-6 text-center relative z-20 mt-auto">
-        <div class="inline-block bg-white dark:bg-black border-2 border-black dark:border-white px-6 py-3 neo-shadow-sm font-bold text-sm transform rotate-1 hover:-rotate-1 transition-transform dark:text-white">
-            <span class="opacity-70">Built with ☕ and slight sleep deprivation by</span> 
-            <a href="https://github.com/sudoax0n" target="_blank" class="text-pink-500 dark:text-pink-400 hover:underline hover:text-pink-600 ml-1">@sudoax0n</a>
-            <div class="mt-2 text-xs text-gray-500 dark:text-gray-400 font-medium">No innocent PDFs were harmed in the making of this tool. ✌️</div>
+    <section class="truth-section shell">
+      <div class="truth-card truth-main">
+        <span class="truth-label">WHY IT DOESN'T SUCK</span>
+        <h2>Your PDF stays a PDF.</h2>
+        <p>Many “dark PDF” tools flatten every page into an image. NightPDF edits the document structure instead, so text remains selectable, searchable, and crisp.</p>
+        <div class="truth-points">
+          <span>✓ no server upload</span>
+          <span>✓ no watermark</span>
+          <span>✓ no account</span>
+          <span>✓ no sad JPEG pages</span>
         </div>
-    </footer>
+      </div>
 
+      <div class="truth-card truth-side">
+        <p class="tiny-kicker">A tiny nerd corner</p>
+        <h3>Difference blend mode.</h3>
+        <p>It injects a white page-sized layer using PDF blend math, flipping the underlying colours without rasterizing the content.</p>
+        <code>white + Difference = night mode</code>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand"><span>🦇</span> NightPDF</div>
+      <p>Built with caffeine, questionable sleep habits, and zero file uploads.</p>
+      <a href="https://github.com/sudoax0n" target="_blank" rel="noopener noreferrer">@sudoax0n ↗</a>
+    </div>
+  </footer>
 </body>
 </html>
