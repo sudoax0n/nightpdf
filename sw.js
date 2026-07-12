@@ -1,17 +1,18 @@
-const CACHE_NAME = 'night-pdf-v2';
+const CACHE_NAME = 'night-pdf-v3';
 const CACHE_PREFIX = 'night-pdf-';
-const ASSETS = [
+const APP_SHELL = [
   '/',
   '/index.html',
   '/styles.css',
   '/script.js',
+  '/manifest.json',
   '/public/favicon.svg'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(ASSETS))
+      .then((cache) => cache.addAll(APP_SHELL))
       .then(() => self.skipWaiting())
   );
 });
