@@ -1,10 +1,11 @@
-const CACHE_NAME = 'night-pdf-v2';
+const CACHE_NAME = 'night-pdf-v3-quirky';
 const CACHE_PREFIX = 'night-pdf-';
 const ASSETS = [
   '/',
   '/index.html',
   '/styles.css',
   '/script.js',
+  '/manifest.json',
   '/public/favicon.svg'
 ];
 
